@@ -1,0 +1,181 @@
+.header {
+    border-bottom: 1px solid #ececec;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+  
+  .header-navigation {
+    display: flex;
+  }
+  
+  .header-logo {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19230769;
+    letter-spacing: 0.03em;
+    color: #2196f3;
+  }
+  
+  .header-logo span {
+    color: #000;
+  }
+  
+  .navigation-list {
+    display: flex;
+    gap: 50px;
+    margin-left: 93px;
+    align-items: center;
+  }
+  
+  .navigation-item {
+    position: relative;
+  }
+  
+  .navigation-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14285714;
+    letter-spacing: 0.02em;
+    color: #212121;
+  
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .navigation-link:hover {
+    color: #2196f3;
+  }
+  
+  .navigation-link:focus {
+    color: #2196f3;
+  }
+  
+  .navigation-widget {
+    display: block;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: white;
+    transform: translatey(100%);
+  
+    transition-property: transform, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .navigation-link:hover + .navigation-widget {
+    transform: translatey(0);
+    background-color: #2196f3;
+  }
+  
+  .navigation-link:focus + .navigation-widget {
+    transform: translatey(0);
+    background-color: #2196f3;
+  }
+  
+  .navigation-second-page {
+    display: block;
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14285714;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
+  
+  .navigation-second-page::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 46px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #2196f3;
+  }
+  
+  .navigation-contacts {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .contact-link:hover {
+    transform: scale(1.02);
+  }
+  
+  .contact-link:focus {
+    transform: scale(1.02);
+  }
+  
+  .contact-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14285714;
+    letter-spacing: 0.02em;
+    color: #757575;
+  
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .contact-link:hover .contact-text {
+    color: #2196f3;
+  }
+  
+  .contact-link:focus .contact-text {
+    color: #2196f3;
+  }
+  
+  .svg-icon-mail {
+    width: 16px;
+    height: 12px;
+    fill: #757575;
+  
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .contact-link:hover .svg-icon-mail {
+    fill: #2196f3;
+  }
+  
+  .contact-link:focus .svg-icon-mail {
+    fill: #2196f3;
+  }
+  
+  .svg-icon-smartphone {
+    width: 10px;
+    height: 16px;
+    fill: #757575;
+  
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .contact-link:hover .svg-icon-smartphone {
+    fill: #2196f3;
+  }
+  
+  .contact-link:focus .svg-icon-smartphone {
+    fill: #2196f3;
+  }
