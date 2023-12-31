@@ -72,7 +72,7 @@ button {
   font-size: 14px;
   line-height: 1.14285714;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: #000;
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -93,25 +93,25 @@ button {
   color: #2196f3;
 }
 .header__navigation-first-page::after {
-  content: "";
   position: absolute;
   top: 46px;
   left: 0;
+  content: "";
+  display: block;
   width: 100%;
   height: 4px;
-  display: block;
   border-radius: 2px;
   background-color: #2196f3;
 }
 .header__navigation-widget {
+  display: block;
   position: absolute;
   top: 46px;
   left: 0;
   width: 100%;
   height: 4px;
-  display: block;
   border-radius: 2px;
-  background-color: white;
+  background-color: #FFF;
   transform: translatey(100%);
   z-index: -2;
   transition-property: transform, background-color, z-index;
@@ -222,7 +222,7 @@ button {
   line-height: 1.36363636;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #FFF;
 }
 .hero__button {
   display: block;
@@ -234,7 +234,7 @@ button {
   line-height: 1.875;
   letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  color: #ffffff;
+  color: #FFF;
   cursor: pointer;
   transition-property: transform;
   transition-duration: 250ms;
@@ -276,7 +276,7 @@ button {
   flex-shrink: 0;
   padding: 40px;
   border-radius: 4px;
-  background: #fff;
+  background: #FFF;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   position: absolute;
   top: 50%;
@@ -431,7 +431,7 @@ input .modal__comment-input::placeholder {
   right: 8px;
   top: 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #FFF;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -446,7 +446,7 @@ input .modal__comment-input::placeholder {
   transform: scale(1.1);
 }
 .modal__close-svg {
-  fill: black;
+  fill: #000;
   width: 18px;
   height: 18px;
   transition-property: fill;
@@ -463,7 +463,7 @@ input .modal__comment-input::placeholder {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   width: 200px;
   height: 50px;
-  color: #fff;
+  color: #FFF;
   text-align: center;
   font-size: 16px;
   font-weight: 700;
@@ -564,7 +564,7 @@ input .modal__comment-input::placeholder {
   justify-content: center;
 }
 .work__text {
-  color: #fff;
+  color: #FFF;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -594,7 +594,7 @@ input .modal__comment-input::placeholder {
   margin-bottom: 30px;
 }
 .team__item {
-  background-color: #fff;
+  background-color: #FFF;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   padding-bottom: 30px;
   border-radius: 4px;
@@ -629,7 +629,7 @@ input .modal__comment-input::placeholder {
 .team__icons {
   display: flex;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: #FFF;
   padding: 12px;
   border-radius: 90px;
   transition-property: background-color;
@@ -643,10 +643,10 @@ input .modal__comment-input::placeholder {
   background-color: #2196f3;
 }
 .team__icons:hover .team__icon {
-  fill: #fff;
+  fill: #FFF;
 }
 .team__icons:focus .team__icon {
-  fill: #fff;
+  fill: #FFF;
 }
 .team__icon {
   width: 20px;
@@ -715,20 +715,17 @@ input .modal__comment-input::placeholder {
 }
 .footer__logo {
   font-family: "Raleway";
-  font-weight: 700;
   font-size: 26px;
-  line-height: 1.19230769;
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  letter-spacing: 0.78px;
   color: #2196f3;
-}
-.footer__logo span {
-  color: #ffffff;
 }
 .footer__container {
   display: flex;
+  justify-content: space-between;
 }
-.footer__box1 {
-  margin-right: 70px;
+.footer__logo span {
+  color: #FFF;
 }
 .footer__address {
   font-style: normal;
@@ -736,7 +733,7 @@ input .modal__comment-input::placeholder {
   font-size: 14px;
   line-height: 1.71428571;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: #FFF;
   margin-top: 20px;
 }
 .footer__link {
@@ -749,10 +746,9 @@ input .modal__comment-input::placeholder {
 }
 .footer__box2 {
   padding-top: 6px;
-  margin-right: 93px;
 }
 .footer__text {
-  color: #fff;
+  color: #FFF;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -784,13 +780,10 @@ input .modal__comment-input::placeholder {
 .footer__icon {
   width: 20px;
   height: 20px;
-  fill: #ffffff;
-}
-.footer__modal {
-  background-color: #2f303a;
+  fill: #FFF;
 }
 .footer__text {
-  color: #fff;
+  color: #FFF;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.42px;
@@ -800,7 +793,7 @@ input .modal__comment-input::placeholder {
   padding-top: 6px;
 }
 .footer__subscription {
-  color: #fff;
+  color: #FFF;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.42px;
@@ -811,9 +804,8 @@ input .modal__comment-input::placeholder {
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(33, 150, 243, 0);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
-  padding: 15px 167px 15px 16px;
+  padding: 15px 185px 15px 16px;
   margin-right: 12px;
 }
 input .footer__input::-moz-placeholder {
@@ -833,7 +825,7 @@ input .footer__input::placeholder {
   letter-spacing: 0.48px;
 }
 .footer__button {
-  color: #fff;
+  color: #FFF;
   text-align: center;
   cursor: pointer;
   font-size: 16px;
@@ -853,7 +845,7 @@ input .footer__input::placeholder {
 .footer__button:hover {
   transform: scale(1.03);
 }
-.footer__svg {
+.footer__button-svg {
   position: absolute;
   left: 148px;
   top: 13px;

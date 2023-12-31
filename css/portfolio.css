@@ -41,13 +41,12 @@ button {
 }
 
 .header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #0e0c0c;
   padding-top: 24px;
   padding-bottom: 25px;
 }
 .header__navigation {
   display: flex;
-  align-items: center;
 }
 .header__logo {
   font-family: "Raleway";
@@ -93,7 +92,7 @@ button {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: white;
+  background-color: #FFF;
   transform: translatey(100%);
   transition-property: transform, background-color;
   transition-duration: 250ms;
@@ -129,9 +128,9 @@ button {
 }
 .header__contacts-list {
   display: flex;
-  gap: 50px;
   margin-left: auto;
   align-items: center;
+  gap: 50px;
 }
 .header__contacts-link {
   display: flex;
@@ -224,12 +223,12 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .pagination__link:hover {
-  color: #ffffff;
+  color: #FFF;
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .pagination__link:focus {
-  color: #ffffff;
+  color: #FFF;
   background-color: #2196f3;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -251,7 +250,7 @@ button {
   width: 100%;
   height: 100%;
   display: block;
-  outline: solid #eeeeee;
+  outline: solid #FFF;
   transition-property: box-shadow, transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -292,9 +291,9 @@ button {
 .content__link:focus .content__overlay {
   transform: translatey(0);
 }
-.content .overlay-text {
+.content__overlay-text {
   font-family: "Roboto";
-  color: #fff;
+  color: #FFF;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.55;
@@ -326,20 +325,17 @@ button {
 }
 .footer__logo {
   font-family: "Raleway";
-  font-weight: 700;
   font-size: 26px;
-  line-height: 1.19230769;
-  letter-spacing: 0.03em;
+  font-weight: 700;
+  letter-spacing: 0.78px;
   color: #2196f3;
-}
-.footer__logo span {
-  color: #ffffff;
 }
 .footer__container {
   display: flex;
+  justify-content: space-between;
 }
-.footer__box1 {
-  margin-right: 70px;
+.footer__logo span {
+  color: #FFF;
 }
 .footer__address {
   font-style: normal;
@@ -347,7 +343,7 @@ button {
   font-size: 14px;
   line-height: 1.71428571;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: #FFF;
   margin-top: 20px;
 }
 .footer__link {
@@ -360,10 +356,9 @@ button {
 }
 .footer__box2 {
   padding-top: 6px;
-  margin-right: 93px;
 }
 .footer__text {
-  color: #fff;
+  color: #FFF;
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -395,13 +390,10 @@ button {
 .footer__icon {
   width: 20px;
   height: 20px;
-  fill: #ffffff;
-}
-.footer__modal {
-  background-color: #2f303a;
+  fill: #FFF;
 }
 .footer__text {
-  color: #fff;
+  color: #FFF;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.42px;
@@ -411,7 +403,7 @@ button {
   padding-top: 6px;
 }
 .footer__subscription {
-  color: #fff;
+  color: #FFF;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.42px;
@@ -422,9 +414,8 @@ button {
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(33, 150, 243, 0);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
-  padding: 15px 167px 15px 16px;
+  padding: 15px 185px 15px 16px;
   margin-right: 12px;
 }
 input .footer__input::-moz-placeholder {
@@ -444,7 +435,7 @@ input .footer__input::placeholder {
   letter-spacing: 0.48px;
 }
 .footer__button {
-  color: #fff;
+  color: #FFF;
   text-align: center;
   cursor: pointer;
   font-size: 16px;
@@ -464,7 +455,7 @@ input .footer__input::placeholder {
 .footer__button:hover {
   transform: scale(1.03);
 }
-.footer__svg {
+.footer__button-svg {
   position: absolute;
   left: 148px;
   top: 13px;
