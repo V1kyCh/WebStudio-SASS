@@ -1,14 +1,14 @@
 .advantages {
-  padding-top: 94px;
+  @include sections-retreat(94px);
 
   &__list {
     display: flex;
     gap: 30px;
   }
-  
+
   &__item {
     width: 270px;
-  
+
     &::before {
       @extend %pseudo-elements-basic-styles;
       height: 120px;
@@ -18,42 +18,34 @@
       background-position: center;
     }
   }
-  
+
   &__ssi1::before {
-      background-image: url(../../../img/imgIndex/ssi/antenna1.webp);
+    background-image: url(../../../img/imgIndex/ssi/antenna1.webp);
   }
-  
+
   &__ssi2::before {
     background-image: url(../../../img/imgIndex/ssi/clock2.webp);
   }
-  
+
   &__ssi3::before {
     background-image: url(../../../img/imgIndex/ssi/diagram3.webp);
   }
-  
+
   &__ssi4::before {
-      background-image: url(../../../img/imgIndex/ssi/astronaut4.webp);
+    background-image: url(../../../img/imgIndex/ssi/astronaut4.webp);
   }
-  
+
   &__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14285714;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+    @include text-styles();
     color: $dark-gray-color;
-  
+    text-transform: uppercase;
+
     margin-top: 33px;
     margin-bottom: 10px;
   }
-  
+
   &__paragraph {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71428571;
-    letter-spacing: 0.03em;
+    @include text-styles(14px, 1.72, 400);
     color: $light-gray-color;
   }
-  
 }
-

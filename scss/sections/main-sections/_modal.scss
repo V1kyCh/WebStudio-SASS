@@ -16,10 +16,7 @@
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .no-scroll {
@@ -27,238 +24,204 @@
 }
 
 .modal {
-  width: 528px;
-  flex-shrink: 0;
-  padding: 40px;
-  border-radius: 4px;
-  background: $white-color;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 528px;
+  padding: 40px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  background: $white-color;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   transform: translate(-50%, -50%);
 
   &__title {
+    @include text-styles(20px, normal, 700, 0.6px);
     color: $dark-gray-color;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 0.6px;
   }
-  
+
   &__list {
+    margin-top: 12px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 12px;
   }
-  
+
   &__label {
-    display: block;
     margin-bottom: 4px;
+    display: block;
   }
-  
+
   &__holder {
     position: relative;
   }
-  
+
   &__input {
+    width: 448px;
+    padding: 13px 0 13px 42px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    padding: 13px 0 13px 42px;
-    width: 448px;
-  
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover {
       border: 1px solid $color-blue;
     }
-    
+
     &:focus {
       border: 1px solid $color-blue;
     }
   }
-  
+
   &__svg {
-    width: 18px;
-    height: 18px;
     position: absolute;
-    fill: black;
     top: 14px;
     left: 14px;
-  
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    width: 18px;
+    height: 18px;
+    fill: black;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   &__input:hover + &__svg {
     fill: $color-blue;
   }
-  
+
   &__input:focus + &__svg {
     fill: $color-blue;
   }
-  
+
   &__people-svg {
     position: absolute;
-    width: 12px;
-    height: 12px;
     top: 17px;
     left: 16px;
+    width: 12px;
+    height: 12px;
   }
-  
+
   &__name-input {
     padding: 14px 0 14px 42px;
   }
-  
+
   &__name-label {
+    @include text-styles(12px, normal, 400, 0.12px);
     color: $light-gray-color;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.12px;
   }
-  
+
   &__phone-label {
+    @include text-styles(12px, normal, 400, 0.12px);
     color: $light-gray-color;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.12px;
   }
-  
+
   &__mail-label {
+    @include text-styles(12px, normal, 400, 0.12px);
     color: $light-gray-color;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.12px;
   }
-  
+
   &__comment-label {
+    @include text-styles(12px, normal, 400, 0.12px);
     color: $light-gray-color;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.12px;
   }
-  
+
   &__comment-input {
+    width: 448px;
+    padding: 12px 0 96px 16px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     flex-shrink: 0;
-    width: 448px;
-    padding: 12px 0 96px 16px;
-  
-    transition-property: border;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover {
       border: 1px solid $color-blue;
     }
-    
+
     &:focus {
       border: 1px solid $color-blue;
     }
   }
-  
+
   input &__comment-input::placeholder {
+    @include text-styles(12px, normal, 400, 0.12px);
     color: $modal-input-placeholder;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.12px;
   }
-  
+
   &__box {
-    @extend %list-position;
-    gap: 5px;
+    position: relative;
     margin-top: 20px;
     padding-left: 13px;
-    position: relative;
+    @extend %list-position;
+    gap: 5px;
   }
-  
+
   &__checkbox-input {
-    background-color: transparent;
     border: solid 2px $dark-gray-color;
+    background-color: transparent;
   }
-  
+
   &__checkbox-text {
+    @include text-styles(14px, 400, 1.7, 0.42px);
     color: $light-gray-color;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.7;
-    letter-spacing: 0.42px;
   }
-  
+
   &__checkbox-link {
-    color: $color-blue;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.42px;
-    text-decoration-line: underline;
     margin-left: 5px;
+    @include text-styles(14px, 1.7, 400, 0.42px);
+    color: $color-blue;
+    text-decoration-line: underline;
   }
-  
+
   &__close {
     position: absolute;
-    cursor: pointer;
     right: 8px;
     top: 8px;
+    @extend %list-position;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: $white-color;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    @extend %list-position;
-  
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover {
       transform: scale(1.1);
     }
   }
-  
+
   &__close-svg {
-    fill: $black-color;
     width: 18px;
     height: 18px;
-  
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    fill: $black-color;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   &__close:hover &__close-svg {
     fill: $color-blue;
   }
-  
+
   &__button {
-    border-radius: 4px;
-    cursor: pointer;
-    background: $color-blue;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    width: 200px;
-    height: 50px;
-    color: $white-color;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.8;
-    letter-spacing: 0.96px;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-  
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    background: $color-blue;
+    @include text-styles(16px, 1.8, 700, 0.96px);
+    color: $white-color;
+    text-align: center;
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover {
       transform: scale(1.03);
     }

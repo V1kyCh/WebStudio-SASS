@@ -1,8 +1,7 @@
 .hero {
   position: relative;
   height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  @include sections-retreat(200px, 200px);
   background-image: url(../../../img/imgIndex/herobc.webp);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
@@ -14,42 +13,35 @@
     height: 100%;
     background-color: $hero-overlay-bg;
   }
-  
+
   &__container {
     position: absolute;
     top: 200px;
     left: 50%;
     transform: translatex(-50%);
   }
-  
+
   &__tittle {
     margin-bottom: 30px;
-    text-align: center;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36363636;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
+    @include text-styles(44px, 1.36, 900, 00.06em);
     color: $white-color;
+    text-align: center;
+    text-transform: uppercase;
   }
-  
+
   &__button {
     display: block;
     padding: 10px 32px;
     margin: 0 auto;
     border-radius: 4px;
     background-color: $color-blue;
-    font-weight: 700;
-    line-height: 1.875;
-    letter-spacing: 0.06em;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    @include text-styles(16px, 1.88, 700, 0.06em);
     color: $white-color;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     &:hover {
       transform: scale(1.08);
     }

@@ -1,14 +1,10 @@
 .work {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include sections-retreat(54px, 94px);
 
   &__title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16666667;
-    text-align: center;
-    letter-spacing: 0.03em;
+    @include text-styles(36px, 1.17);
     color: $dark-gray-color;
+    text-align: center;
   }
   
   &__list {
@@ -23,24 +19,21 @@
   
   &__box {
     position: absolute;
+    left: 0;
+    bottom: 0;
     width: 360px;
     height: 70px;
     background-color: $work-box-bc;
-    left: 0;
-    bottom: 0;
     opacity: 80%;
     @extend %list-position;
     justify-content: center;
   }
   
   &__text {
+    @include text-styles(14px, normal, 700, 0.42px);
     color: $white-color;
     text-align: center;
-    font-size: 14px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.42px;
     text-transform: uppercase;
   } 
 }
