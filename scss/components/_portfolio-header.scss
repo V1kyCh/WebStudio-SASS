@@ -87,12 +87,10 @@
     color: $color-blue;
   
     &::after {
-      content: "";
-      display: block;
+      @extend %pseudo-elements-basic-styles !optional;
       position: absolute;
       top: 46px;
       left: 0;
-      width: 100%;
       height: 4px;
       border-radius: 2px;
       background-color: $color-blue;

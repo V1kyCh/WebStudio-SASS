@@ -10,9 +10,7 @@
     width: 270px;
   
     &::before {
-      content: "";
-      display: block;
-      width: 100%;
+      @extend %pseudo-elements-basic-styles;
       height: 120px;
       background-color: $advantages-before-bc-team-bc-portfolio-link-color;
       background-size: 70px;

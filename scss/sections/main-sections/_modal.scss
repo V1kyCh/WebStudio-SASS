@@ -171,8 +171,7 @@
   }
   
   &__box {
-    display: flex;
-    align-items: center;
+    @extend %list-position;
     gap: 5px;
     margin-top: 20px;
     padding-left: 13px;
@@ -212,9 +211,8 @@
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    display: flex;
     justify-content: center;
-    align-items: center;
+    @extend %list-position;
   
     transition-property: transform;
     transition-duration: 250ms;
