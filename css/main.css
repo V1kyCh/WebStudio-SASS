@@ -40,19 +40,20 @@ button {
   border: none;
 }
 
+.footer__logo, .header__contacts-link, .header__navigation {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   padding-top: 24px;
   padding-bottom: 25px;
-}
-.header__navigation {
-  display: flex;
-  align-items: center;
 }
 .header__logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19230769;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   color: #2196f3;
 }
@@ -70,7 +71,7 @@ button {
 .header__navigation-link {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14285714;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: #000;
   transition-property: color;
@@ -88,28 +89,28 @@ button {
   display: block;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14285714;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: #2196f3;
 }
 .header__navigation-first-page::after {
+  content: "";
   position: absolute;
   top: 46px;
   left: 0;
-  content: "";
-  display: block;
   width: 100%;
   height: 4px;
+  display: block;
   border-radius: 2px;
   background-color: #2196f3;
 }
 .header__navigation-widget {
-  display: block;
   position: absolute;
   top: 46px;
   left: 0;
   width: 100%;
   height: 4px;
+  display: block;
   border-radius: 2px;
   background-color: #FFF;
   transform: translatey(100%);
@@ -129,13 +130,11 @@ button {
   z-index: 1;
 }
 .header__contacts-list {
+  margin-left: auto;
   display: flex;
   gap: 50px;
-  margin-left: auto;
 }
 .header__contacts-link {
-  display: flex;
-  align-items: center;
   gap: 10px;
   transition-property: transform;
   transition-duration: 250ms;
@@ -178,7 +177,7 @@ button {
 .header__contacts-text {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14285714;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
   transition-property: color;
@@ -709,9 +708,9 @@ input .modal__comment-input::placeholder {
 }
 
 .footer {
-  background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #2f303a;
 }
 .footer__logo {
   font-family: "Raleway";
@@ -728,21 +727,21 @@ input .modal__comment-input::placeholder {
   color: #FFF;
 }
 .footer__address {
+  margin-top: 20px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71428571;
   letter-spacing: 0.03em;
   color: #FFF;
-  margin-top: 20px;
 }
 .footer__link {
+  margin-top: 9px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71428571;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  margin-top: 9px;
 }
 .footer__box2 {
   padding-top: 6px;
@@ -763,10 +762,10 @@ input .modal__comment-input::placeholder {
 }
 .footer__icons {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.1);
   align-items: center;
   padding: 12px;
   border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -783,61 +782,61 @@ input .modal__comment-input::placeholder {
   fill: #FFF;
 }
 .footer__text {
-  color: #FFF;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.42px;
   text-transform: uppercase;
+  color: #FFF;
 }
 .footer__form {
   padding-top: 6px;
 }
 .footer__subscription {
-  color: #FFF;
+  margin-bottom: 20px;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  color: #FFF;
 }
 .footer__input {
+  padding: 15px 185px 15px 16px;
+  margin-right: 12px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(33, 150, 243, 0);
   flex-shrink: 0;
-  padding: 15px 185px 15px 16px;
-  margin-right: 12px;
 }
 input .footer__input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.48px;
+  color: rgba(255, 255, 255, 0.6);
 }
 input .footer__input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.48px;
+  color: rgba(255, 255, 255, 0.6);
 }
 .footer__button {
-  color: #FFF;
+  position: relative;
+  padding: 10px 62px 10px 28px;
   text-align: center;
   cursor: pointer;
+  border-radius: 4px;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.8;
   letter-spacing: 0.96px;
-  border-radius: 4px;
-  background: #2196f3;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  padding: 10px 62px 10px 28px;
-  position: relative;
+  background: #2196f3;
+  color: #FFF;
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
