@@ -163,8 +163,8 @@
     background-color: transparent;
   }
 
-  &__checkbox-text {
-    @include text-styles(14px, 400, 1.7, 0.42px);
+  &__checkbox-label {
+    @include text-styles(14px, 1.7, 400, 0.42px);
     color: $light-gray-color;
   }
 

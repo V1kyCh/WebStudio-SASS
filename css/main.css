@@ -407,10 +407,10 @@ input .modal__comment-input::placeholder {
   border: solid 2px #212121;
   background-color: transparent;
 }
-.modal__checkbox-text {
+.modal__checkbox-label {
   font-size: 14px;
-  font-weight: 1.7;
-  line-height: 400;
+  font-weight: 400;
+  line-height: 1.7;
   letter-spacing: 0.42px;
   color: #757575;
 }
