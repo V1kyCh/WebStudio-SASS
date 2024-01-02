@@ -112,6 +112,9 @@ button {
   color: #2196f3;
 }
 .header__navigation-second-page::after {
+  content: "";
+  display: block;
+  width: 100%;
   position: absolute;
   top: 46px;
   left: 0;

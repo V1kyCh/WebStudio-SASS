@@ -73,7 +73,9 @@
     color: $color-blue;
   
     &::after {
-      @extend %pseudo-elements-basic-styles !optional;
+      content: "";
+      display: block;
+      width: 100%;
       position: absolute;
       top: 46px;
       left: 0;
