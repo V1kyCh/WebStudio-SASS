@@ -11,8 +11,10 @@
 }
 
 
-@mixin sections-retreat($padding-top: 54px, 
-  $padding-buttom: 54px) {
+@mixin sections-retreat(
+  $padding-top: 54px, 
+  $padding-buttom: 54px) 
+  {
   padding-top: $padding-top;
   padding-bottom: $padding-buttom;
 }
