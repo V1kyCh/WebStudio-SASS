@@ -1,5 +1,10 @@
 .work {
   @include sections-retreat(54px, 94px);
+  display: none;
+  
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
 
   &__title {
     @include text-styles(36px, 1.17);

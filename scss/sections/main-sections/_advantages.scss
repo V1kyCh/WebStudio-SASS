@@ -1,21 +1,48 @@
 .advantages {
-  @include sections-retreat(94px);
+  @include sections-retreat(60px, 60px);
+
+  @media screen and (min-width: 1440px) {
+    @include sections-retreat(94px); 
+  }
 
   &__list {
     display: flex;
+    flex-direction: column;
     gap: 30px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1440px) {
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
-    width: 270px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 
     &::before {
       @extend %pseudo-elements-basic-styles;
       height: 120px;
+      border-radius: 4px;
       background-color: $advantages-before-bc-team-bc-portfolio-link-color;
       background-size: 70px;
       background-repeat: no-repeat;
       background-position: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      width: 270px;
     }
   }
 
@@ -41,7 +68,6 @@
     text-transform: uppercase;
 
     margin-top: 33px;
-    margin-bottom: 10px;
   }
 
   &__paragraph {

@@ -5,16 +5,36 @@
 
   &__logo {
     @extend %list-position !optional;
+    @include text-styles(24px, normal, 700, 0.72px);
     font-family: "Raleway";
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 0.78px;
     color: $color-blue;
+
+    @media screen and (min-width: 1440px) {
+      @include text-styles(26px, normal, 700, 0.78px);
+    }
   }
 
   &__container {
-    display: flex;
-    justify-content: space-between;
+    @extend %display-column-center !optional;
+    gap: 60px;
+
+    @media screen and (min-width: 768px) {
+      // justify-content: space-around;
+      // display: flex;
+    }    
+
+    @media screen and (min-width: 1440px) {
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  &__box1 {
+    @extend %display-column-center !optional;
+
+    @media screen and (min-width: 768px) {
+      width: 232px;
+    }
   }
 
   &__logo span {
@@ -22,35 +42,43 @@
   }
 
   &__address {
+    font-family: 'Roboto';
+    @include text-styles (14px, 1.72, 400, 0.42px);
     margin-top: 20px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.72;
-    letter-spacing: 0.03em;
     color: $white-color;
+
+    @media screen and (min-width: 1440px) {
+      @include text-styles (14px, 1.72, 700, 0.03em);
+    }
+  }
+
+  &__list {
+    margin-top: 8px;
+    @extend %display-column-center !optional;
+    gap: 8px;
   }
 
   &__link {
+    @include text-styles (14px, 1.72, 400, 0.42px);
     margin-top: 9px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.72;
-    letter-spacing: 0.03em;
     color: $footer-link-color;
+
+    @media screen and (min-width: 1440px) {
+      @include text-styles (14px, 1.72, 700, 0.03em);
+    }
   }
 
   &__box2 {
-    padding-top: 6px;
+    @extend %display-column-center !optional;
+
+    @media screen and (min-width: 768px) {
+      width: 206px;
+    }
   }
 
   &__text {
     color: $white-color;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.42px;
+    @include text-styles (14px, normal, 700, 0.42px);
     text-transform: uppercase;
   }
 
@@ -87,24 +115,25 @@
   }
 
   &__text {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.42px;
+    @include text-styles (14px, normal, 700, 0.42px);
     text-transform: uppercase;
     color: $white-color;
   }
 
   &__form {
     padding-top: 6px;
+    @extend %display-column-center !optional;
+    gap: 20px;
   }
 
   &__subscription {
-    margin-bottom: 20px;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.42px;
+    @include text-styles (14px, normal, 700, 0.42px);
     text-transform: uppercase;
     color: $white-color;
+
+    @media screen and (min-width:1440px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__input {
@@ -117,11 +146,7 @@
   }
 
   input &__input::placeholder {
-    font-style: normal;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: 0.48px;
+    @include text-styles (16px, 1.2, 400, 0.48px);
     color: $footer-link-color;
   }
 
@@ -131,11 +156,7 @@
     text-align: center;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.8;
-    letter-spacing: 0.96px;
+    @include text-styles (16px, 1.8, 700, 0.96px);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background: $color-blue;
     color: $white-color;

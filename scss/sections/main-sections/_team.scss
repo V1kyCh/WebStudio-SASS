@@ -3,82 +3,108 @@
   @include sections-retreat(94px, 94px);
 
   &__title {
-    @include text-styles(36px, 1.17);
+    @include text-styles(28px, normal, 700, 0.84px);
     color: $dark-gray-color;
     text-align: center;
+
+    @media screen and (min-width: 1440px) {
+      @include text-styles(36px, normal, 700, 1.08px);
+    }
   }
-  
+
   &__list {
-    display: flex;
-    gap: 30px;
     margin-top: 50px;
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1440px) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
   }
-  
+
   &__item {
     background-color: $white-color;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
       0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
     padding-bottom: 30px;
     border-radius: 4px;
+
+    @media screen and (min-width: 768px) and (max-width:1440px) {
+      width: 354px;
+    }
   }
-  
+
   &__image {
-    width: 270px;
+    width: 100%;
   }
-  
+
   &__subtitle {
+    @include text-styles(16px, normal, 500, 0.48px);
     margin-top: 30px;
-    @include text-styles(16px, 1.19, 500);
     color: $dark-gray-color;
     text-align: center;
+
+    @media screen and (min-width: 1440) {
+      @include text-styles(16px, 1.19, 500);
+    }
   }
-  
+
   &__text {
+    @include text-styles(16px, normal, 400, 0.48px);
     margin-top: 10px;
-    @include text-styles(16px, 1.19, 400);
     color: $light-gray-color;
     text-align: center;
+
+    @media screen and (min-width: 1440px) {
+      @include text-styles(16px, 1.19, 400);
+    }
   }
-  
+
   &__socials {
     margin-top: 16px;
     display: flex;
     gap: 10px;
     justify-content: center;
   }
-  
+
   &__icons {
     display: flex;
     justify-content: center;
     background-color: $white-color;
     padding: 12px;
     border-radius: 90px;
-  
+
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+
     &:hover {
       background-color: $color-blue;
     }
-    
+
     &:focus {
       background-color: $color-blue;
     }
   }
-  
+
   &__icons:hover &__icon {
     fill: $white-color;
   }
-  
+
   &__icons:focus &__icon {
     fill: $white-color;
   }
-  
+
   &__icon {
     width: 20px;
     height: 20px;
     fill: $customers-team-sections-link-social-icon-color-gray;
-  
+
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }  
+  }
 }

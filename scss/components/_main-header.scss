@@ -1,41 +1,79 @@
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  width: 45 px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 
   &__navigation {
     @extend %list-position;
   }
 
   &__logo {
-    font-family: "Raleway";
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    font-family: 'Raleway';
     color: $color-blue;
-  } 
+
+    @media screen and (min-width: 1440px) {
+      @include text-styles (26px, normal, 700, 0.78px)
+    }
+  }
 
   &__logo span {
     color: $black-color;
   }
 
+  &__menu {
+    display: block;
+    background-color: $white-color;
+    padding: 12px 8px;
+    margin-left: auto;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__menu-svg {
+    width: 24px;
+    height: 16px;
+    fill: $black-color;
+  }
+
   // navigation
 
   &__navigation-list {
-    display: flex;
+    display: none;
     gap: 50px;
-    margin-left: 93px;
+    margin-left: 88px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 1440px) {
+      margin-left: 93px;
+      gap: 53px;
+    }
   }
-  
+
   &__navigation-item {
     position: relative;
   }
 
   &__navigation-link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include text-styles(14px, normal, 500, 0.28px);
     color: $black-color;
 
     transition-property: color;
@@ -49,31 +87,41 @@
     &:focus {
       color: $color-blue;
     }
+
+    @media screen and (min-width: 1440px) {
+      @include text-styles(14px, 1.14, 500, 0.02em);
+    }
   }
 
   &__navigation-first-page {
     position: relative;
     display: block;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include text-styles(14px, 1.14, 500, 0.02em);
     color: $color-blue;
 
     &::after {
       @extend %pseudo-elements-basic-styles;
       position: absolute;
-      top: 46px;
+      top: 47px;
       left: 0;
       height: 4px;
       border-radius: 2px;
       background-color: $color-blue;
+
+      @media screen and (min-width: 1440px) {
+        top: 46px;
+      }
+    }
+
+    @media screen and (min-width: 1440px) {
+      // top: 46px;
+      @include text-styles(14px, normal, 500, 0.28px);
     }
   }
 
   &__navigation-widget {
     position: absolute;
-    top: 46px;
+    top: 47px;
     left: 0;
     width: 100%;
     height: 4px;
@@ -86,6 +134,10 @@
     transition-property: transform, background-color, z-index;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 1440px) {
+      top: 46px;
+    }
   }
 
   &__navigation-link:hover + &__navigation-widget {
@@ -100,14 +152,22 @@
     z-index: 1;
   }
 
-
-// contacts
-
+  // contacts
 
   &__contacts-list {
+    display: none;
     margin-left: auto;
-    display: flex;
-    gap: 50px;
+    flex-direction: column;
+    gap: 10px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 1440px) {
+      flex-direction: row;
+      gap: 30px;
+    }
   }
 
   &__contacts-link {
@@ -121,47 +181,47 @@
     &:hover {
       transform: scale(1.02);
     }
-    
+
     &:focus {
       transform: scale(1.02);
     }
   }
-  
+
   &__contacts-svg-mail {
     width: 16px;
     height: 12px;
     fill: $light-gray-color;
-  
+
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   &__contacts-link:hover &__contacts-svg-mail {
     fill: $color-blue;
   }
-  
+
   &__contacts-link:focus &__contacts-svg-mail {
     fill: $color-blue;
   }
-  
+
   &__contacts-svg-smartphone {
     width: 10px;
     height: 16px;
     fill: $light-gray-color;
-  
+
     transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   &__contacts-link:hover &__contacts-svg-smartphone {
     fill: $color-blue;
   }
-  
+
   &__contacts-link:focus &__contacts-svg-smartphone {
     fill: $color-blue;
-  }  
+  }
 
   &__contacts-text {
     font-weight: 500;
@@ -169,18 +229,17 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $light-gray-color;
-  
+
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   &__contacts-link:hover &__contacts-text {
     color: $color-blue;
   }
-  
+
   &__contacts-link:focus &__contacts-text {
     color: $color-blue;
   }
-  
 }
