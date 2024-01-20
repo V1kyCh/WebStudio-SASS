@@ -300,13 +300,13 @@ button {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url(../../../img/hero-bc/herobc-tablet.webp);
+    background-image: url(../../img/hero-bc/herobc-tablet.webp);
   }
 }
 @media screen and (min-width: 1440px) {
   .hero {
     height: 600px;
-    background-image: url(../../../img/hero-bc/herobc.webp);
+    background-image: url(../../img/hero-bc/herobc.webp);
   }
 }
 .hero__overlay {
