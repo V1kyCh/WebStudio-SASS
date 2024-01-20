@@ -1,50 +1,118 @@
 .header {
+  @include sections-retreat(10px, 10px);
   border-bottom: 1px solid $portfolio-header-border-color;
-  @include sections-retreat(24px, 25px);
+
+  @media screen and (min-width: 768px) {
+    @include sections-retreat(21px, 21px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include sections-retreat(24px, 24px);
+  }
 
   &__navigation {
     display: flex;
+    align-items: center;
   }
-  
+
   &__logo {
     @include text-styles(26px, 1.19);
     color: $color-blue;
     font-family: "Raleway";
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      @include text-styles(26px, normal, 700, 0.78px);
+    }
   }
-  
+
   &__logo span {
     color: $black-color;
   }
-  
-  &__navigation-list {
-    margin-left: 93px;
-    display: flex;
-    gap: 50px;
-    align-items: center;
+
+  &__menu {
+    padding: 12px 8px;
+    margin-left: 260px;
+    background-color: $white-color;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
-  
+
+  &__menu-svg {
+    width: 24px;
+    height: 16px;
+    fill: $black-color;
+  }
+
+  // navigation
+
+  &__navigation-list {
+    margin-left: 88px;
+    display: none;
+    gap: 50px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-left: 93px;
+      gap: 53px;
+    }
+  }
+
   &__navigation-item {
     position: relative;
   }
-  
+
   &__navigation-link {
     @include text-styles(14px, 1.14, 500, 0.02em);
     color: $dark-gray-color;
-  
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+
+    @include transition-mixin-one-element(color);
+
     &:hover {
       color: $color-blue;
     }
-    
+
     &:focus {
       color: $color-blue;
     }
+
+    @media screen and (min-width: 1200px) {
+      @include text-styles(14px, 1.14, 500, 0.02em);
+    }
   }
-  
+
+  &__navigation-second-page {
+    position: relative;
+    display: block;
+    @include text-styles(14px, 1.14, 500, 0.02em);
+    color: $color-blue;
+    padding-top: 2px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      position: absolute;
+      top: 52px;
+      left: 0;
+      height: 4px;
+      border-radius: 2px;
+      background-color: $color-blue;
+
+      @media screen and (min-width: 1200px) {
+        top: 45px;
+      }
+    }
+  }
+
   &__navigation-widget {
     position: absolute;
-    top: 47px;
+    top: 52px;
     left: 0;
     width: 100%;
     height: 4px;
@@ -52,106 +120,102 @@
     border-radius: 2px;
     background-color: $white-color;
     transform: translatey(100%);
-  
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -2;
+
+    @include transition-mixin-one-element(transform);
+
+    @media screen and (min-width: 1200px) {
+      top: 45px;
+    }
   }
-  
+
   &__navigation-link:hover + &__navigation-widget {
     transform: translatey(0);
     background-color: $color-blue;
+    z-index: 1;
   }
-  
+
   &__navigation-link:focus + &__navigation-widget {
     transform: translatey(0);
     background-color: $color-blue;
+    z-index: 1;
   }
-  
-  &__navigation-second-page {
-    position: relative;
-    display: block;
-    @include text-styles(14px, 1.14, 500, 0.02em);
-    color: $color-blue;
-  
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      position: absolute;
-      top: 46px;
-      left: 0;
-      height: 4px;
-      border-radius: 2px;
-      background-color: $color-blue;
+
+  &__contacts-list {
+    display: none;
+    margin-left: auto;
+    flex-direction: column;
+    gap: 10px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      gap: 50px;
     }
   }
-  
-  &__contacts-list {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-  }
-  
+
   &__contacts-link {
-    display: flex;
-    align-items: center;
+    @extend %list-position !optional;
     gap: 10px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+
+    @include transition-mixin-one-element(transform);
+
     &:hover {
       transform: scale(1.02);
     }
-    
+
     &:focus {
       transform: scale(1.02);
     }
   }
-  
+
   &__contacts-text {
     @include text-styles(14px, 1.14, 500, 0.02em);
     color: $light-gray-color;
-  
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include transition-mixin-one-element(color);
   }
-  
+
   &__contacts-link:hover &__contacts-text {
     color: $color-blue;
   }
-  
+
   &__contacts-link:focus &__contacts-text {
     color: $color-blue;
   }
-  
+
   &__contacts-svg-mail {
     width: 16px;
     height: 12px;
     fill: $light-gray-color;
-  
+
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   &__contacts-link:hover &__contacts-svg-mail {
     fill: $color-blue;
   }
-  
+
   &__contacts-link:focus &__contacts-svg-mail {
     fill: $color-blue;
   }
-  
+
   &__contacts-svg-smartphone {
     width: 10px;
     height: 16px;
     fill: $light-gray-color;
-  
+
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   &__contacts-link:hover &__contacts-svg-smartphone {
     fill: $color-blue;
   }
-  
+
   &__contacts-link:focus &__contacts-svg-smartphone {
     fill: $color-blue;
   }
-  
 }

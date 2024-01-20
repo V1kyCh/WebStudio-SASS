@@ -20,12 +20,12 @@
 }
 
 
-// @mixin transition-mixin-one-element(
-//   $property: transform,
-//   $duration: 250ms,
-//   $timing-function: cubic-bezier(0.4, 0, 0.2, 1)
-// ) {
-//   transition-property: $property;
-//   transition-duration: $duration;
-//   transition-timing-function: $timing-function;
-// }
+@mixin transition-mixin-one-element(
+  $property,
+  $duration: 250ms,
+  $timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+}

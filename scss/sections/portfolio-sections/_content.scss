@@ -1,5 +1,13 @@
 .content {
-  @include sections-retreat(25px, 94px);
+  @include sections-retreat(20px, 60px);
+
+  @media screen and (min-width: 768px) {
+    @include sections-retreat(15px, 60px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include sections-retreat(25px, 94px);
+  }
 
   &__list {
     display: flex;
@@ -8,31 +16,43 @@
   }
 
   &__item {
-    width: 370px;
-    height: 404px;
-    flex-basis: calc((100% - 60px) / 3);
+    width: 100%;
+    height: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      height: 440px;
+      flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 370px;
+      height: 404px;
+      flex-basis: calc((100% - 60px) / 3);
+    }
   }
 
   &__link {
     width: 100%;
     height: 100%;
+    padding-bottom: 20px;
     display: block;
     outline: solid $content-link-border;
 
     transition-property: box-shadow, transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
+
     &:hover {
       box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-        transform: scale(1.05);  
+      transform: scale(1.05);
     }
-  
+
     &:focus {
       box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
         0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
-        transform: scale(1.05);  
+      transform: scale(1.05);
     }
   }
 

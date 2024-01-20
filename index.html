@@ -64,7 +64,7 @@
     <!-- MAIN -->
     <main class="main">
       <!-- cекція герой -->
-      <section class="hero" data-aos="zoom-in" data-aos-duration="500">
+      <section class="hero">
         <div class="container">
             <div class="hero__overlay"></div>
             <div class="hero__container">
@@ -383,13 +383,15 @@
         </div>
         <form class="footer__form">
           <p class="footer__subscription">Підпишіться на розсилку</p>
-          <input class="footer__input" type="email" required placeholder="E-mail">
-          <button class="footer__button" type="submit">
-            <span>Підписатися</span>
-            <svg class="footer__button-svg" width="24px" height="24px">
-              <use href="./img/svg/symbol-defs.svg#icon-telegram"></use>
-            </svg>
-          </button>
+          <div class="footer__form-div">
+            <input class="footer__input" type="email" required placeholder="E-mail">
+            <button class="footer__button" type="submit">
+              <span>Підписатися</span>
+              <svg class="footer__button-svg" width="24px" height="24px">
+                <use href="./img/svg/symbol-defs.svg#icon-telegram"></use>
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </footer>
