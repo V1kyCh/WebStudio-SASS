@@ -1,12 +1,12 @@
 .pagination {
-  @include sections-retreat(60px, 20px);
+  @include sections-retreat(60px, 40px);
 
   @media screen and (min-width: 768px) {
-    @include sections-retreat(60px, 15px);
+    @include sections-retreat(60px, 30px);
   }
 
   @media screen and (min-width: 1200px) {
-    @include sections-retreat(94px, 25px);
+    @include sections-retreat(94px, 50px);
   }
 
   &__list {

@@ -6,14 +6,16 @@
   background-position: center;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   height: 400px;
+  padding: 118px 240px;
 
-  @media screen and (min-width: 768px) {
-    background-image: url(../../img/hero-bc/herobc-tablet.webp);
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    height: 400px;
+    background-image: url(../../../img/hero-bc/herobc-tablet.webp);
   }
 
-  @media screen and (min-width: 1440px) {
-    height: 600px;
+  @media screen and (min-width: 768px) {
     background-image: url(../../img/hero-bc/herobc.webp);
+    height: 600px;
   }
 
   &__overlay {
@@ -32,7 +34,7 @@
     left: 50%;
     transform: translatex(-50%);
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1200px) {
       top: 200px;
     }
   }
@@ -45,7 +47,7 @@
     width: 360px;
     margin-bottom: 30px;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1200px) {
       @include text-styles(44px, 1.36, 900, 00.06em);
       width: 696px;
     }

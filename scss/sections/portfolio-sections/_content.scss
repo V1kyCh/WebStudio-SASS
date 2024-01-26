@@ -1,12 +1,8 @@
 .content {
-  @include sections-retreat(20px, 60px);
-
-  @media screen and (min-width: 768px) {
-    @include sections-retreat(15px, 60px);
-  }
+  padding-bottom: 60px;
 
   @media screen and (min-width: 1200px) {
-    @include sections-retreat(25px, 94px);
+    padding-bottom: 94px;
   }
 
   &__list {

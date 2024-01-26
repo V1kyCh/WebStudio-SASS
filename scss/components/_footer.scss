@@ -1,4 +1,5 @@
 .footer {
+  width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
@@ -148,6 +149,7 @@
   }
 
   &__form {
+    width: 100%;
     padding-top: 6px;
     display: flex;
     flex-direction: column;
@@ -171,6 +173,7 @@
   &__form-div {
     @extend %display-column-center !optional;
     gap: 20px;
+    width: 100%;
 
     @media screen and (min-width: 1200px) {
       align-items: start;
@@ -189,14 +192,15 @@
   }
 
   &__input {
+    width: 100%;
     padding: 15px 185px 15px 16px;
-    // margin-right: 12px;
     border-radius: 4px;
     border: 1px solid $footer-input-border-color;
     background-color: $footer-input-background-color;
     flex-shrink: 0;
 
     @media screen and (min-width: 768px) {
+      width: auto;
       padding: 15px 250px 15px 16px;
     }
 
