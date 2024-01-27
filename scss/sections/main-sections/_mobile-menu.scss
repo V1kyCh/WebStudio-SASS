@@ -1,3 +1,8 @@
+.menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .menu {
   position: fixed;
   top: 0;
