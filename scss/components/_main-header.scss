@@ -1,8 +1,23 @@
+// body {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   overflow: scroll;
+// }
+
+// .main {
+//   max-width: 100%;
+// }
+
 .header {
+
+  // max-width: 100%;
+
   @include sections-retreat (10px, 10px);
 
   @media screen and (min-width: 768px) {
-    width: 100%;
     @include sections-retreat (21px, 21px);
   }
 

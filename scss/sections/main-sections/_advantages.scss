@@ -1,7 +1,7 @@
 .advantages {
   @include sections-retreat(60px, 60px);
 
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1200px) {
     @include sections-retreat(94px); 
   }
 
@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    justify-content: center;
 
     @media screen and (min-width: 768px) {
       display: flex;
@@ -41,7 +42,7 @@
       width: 354px;
     }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1200px) {
       width: 270px;
     }
   }
