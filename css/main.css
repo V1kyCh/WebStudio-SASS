@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Roboto";
 }
@@ -405,20 +406,20 @@ button {
 .hero {
   position: relative;
   background-color: rgba(47, 48, 58, 0.4);
-  background-image: url(../../../img/hero-bc/herobc-mobile.webp);
+  background-image: url(../../../img/main-img/mobile/hero-bc-mob@1х-min.jpg);
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   height: 400px;
 }
-@media screen and (min-width: 481px) and (max-width: 768px) {
+@media screen and (min-width: 481px) and (max-width: 1200px) {
   .hero {
-    background-image: url(../../../img/hero-bc/herobc-tablet.webp);
+    background-image: url(../../../img/main-img/tablet/hero-bg-tab@1x-min.jpg);
   }
 }
 @media screen and (min-width: 769px) {
   .hero {
-    background-image: url(../../../img/hero-bc/herobc.webp);
+    background-image: url(../../../img/main-img/desktop/hero-bg-desk@1x-min.jpg);
     height: 400px;
   }
 }
@@ -875,6 +876,7 @@ input .modal__comment-input::placeholder {
   .team__list {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1440px) {
