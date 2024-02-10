@@ -17,7 +17,7 @@
     integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
 
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
   <link href="./dist/css/main.min.css" rel="stylesheet">
 </head>
 
@@ -124,22 +124,33 @@
         <h2 class="work__title" data-aos="zoom-in-up" data-aos-duration="800">Чим ми займаємося</h2>
         <ul class="work__list">
           <li class="work__item" data-aos="zoom-in-down" data-aos-duration="1000">
-            <!-- <picture>
-              <source srcset="">
+            <picture>
+              <source
+                srcset="./img/main-img/desktop/work-img1@1x-min.jpg 1x, ./img/main-img/desktop/work-img1@2x-min.jpg 2x"
+                media="(min-width: 1200px)">
               <img class="work__img" src="./img/main-img/desktop/work-img1@1x-min.jpg" alt="планшетні рішення">
-            </picture> -->
+            </picture>
             <div class="work__box">
               <p class="work__text">Десктопні додатки</p>
             </div>
           </li>
           <li class="work__item" data-aos="zoom-in-down" data-aos-duration="1000">
-            <img class="work__img" src="./img/imgIndex/img2.webp" alt="мобільні сайти">
+            <source
+              srcset="./img/main-img/desktop/work-img2@1x-min.jpg 1x, ./img/main-img/desktop/work-img2@2x-min.jpg 2x"
+              media="(min-width: 1200px)">
+            <img class="work__img" src="./img/main-img/desktop/work-img2@1x-min.jpg" alt="планшетні рішення">
+            </picture>
             <div class="work__box">
               <p class="work__text">Мобільні додатки</p>
             </div>
           </li>
           <li class="work__item" data-aos="zoom-in-down" data-aos-duration="1000">
-            <img class="work__img" src="./img/imgIndex/img3.webp" alt="дизайнерські рішення">
+            <picture>
+              <source
+                srcset="./img/main-img/desktop/work-img3@1x-min.jpg 1x, ./img/main-img/desktop/work-img3@2x-min.jpg 2x"
+                media="(min-width: 1200px)">
+              <img class="work__img" src="./img/main-img/desktop/work-img3@1x-min.jpg" alt="планшетні рішення">
+            </picture>
             <div class="work__box">
               <p class="work__text">Дизайнерські рішення</p>
             </div>
@@ -153,7 +164,18 @@
         <h2 class="team__title" data-aos="zoom-out-up" data-aos-duration="400">Наша команда</h2>
         <ul class="team__list">
           <li class="team__item" data-aos="flip-left" data-aos-duration="1000">
-            <img class="team__image" src="./img/imgIndex/img4.webp" alt="фото гора Дем'яненко" width="500">
+            <picture class="team__image">
+              <source
+                srcset="./img/main-img/mobile/team-p1-mob@1x-min.jpg 1x, ./img/main-img/mobile/team-p1-mob@2x-min.jpg 2x"
+                media="(max-width:767px)">
+              <source
+                srcset="./img/main-img/desktop/team-p1-desk@1х-min.jpg 1x, ./img/main-img/desktop/team-p1-desk@2x-min.jpg 2x"
+                media="(max-width:1199px)">
+              <source
+                srcset="./img/main-img/desktop/team-p1-desk@1x-min.jpg 1x, ./img/main-img/desktop/team-p1-desk@2x-min.jpg 2x"
+                media="(min-width:1200px)">
+              <img src="./img/main-img/desktop/team-p1-desk@1x-min.jpg" alt="фото гора Дем'яненко" width="500">
+            </picture>
             <h3 class="team__subtitle">Ігор Дем'яненко</h3>
             <p class="team__text">Product Designer</p>
             <ul class="team__socials">
@@ -188,7 +210,18 @@
             </ul>
           </li>
           <li class="team__item" data-aos="flip-left" data-aos-duration="1500">
-            <img class="team__image" src="./img/imgIndex/img5.webp" alt="фото Ольги Рєпіни" width="500">
+            <picture class="team__image">
+              <source
+                srcset="./img/main-img/mobile/team-p2-mob@1x-min.jpg 1x, ./img/main-img/mobile/team-p2-mob@2x-min.jpg 2x"
+                media="(max-width:767px)">
+              <source
+                srcset="./img/main-img/desktop/team-p2-desk@1х-min.jpg 1x, ./img/main-img/desktop/team-p2-desk@2x-min.jpg 2x"
+                media="(max-width:1199px)">
+              <source
+                srcset="./img/main-img/desktop/team-p2-desk@1x-min.jpg 1x, ./img/main-img/desktop/team-p2-desk@2x-min.jpg 2x"
+                media="(min-width:1200px)">
+              <img src="./img/main-img/desktop/team-p2-desk@1x-min.jpg" alt="фото гора Дем'яненко" width="500">
+            </picture>
             <h3 class="team__subtitle">Ольга Рєпіна</h3>
             <p class="team__text">Frontend Developer</p>
             <ul class="team__socials">
@@ -223,7 +256,18 @@
             </ul>
           </li>
           <li class="team__item" data-aos="flip-left" data-aos-duration="2000">
-            <img class="team__image" src="./img/imgIndex/img6.webp" alt="фото Миколи Тарасова" width="500">
+            <picture class="team__image">
+              <source
+                srcset="./img/main-img/mobile/team-p3-mob@1x-min.jpg 1x, ./img/main-img/mobile/team-p3-mob@2x-min.jpg 2x"
+                media="(max-width:767px)">
+              <source
+                srcset="./img/main-img/desktop/team-p3-desk@1х-min.jpg 1x, ./img/main-img/desktop/team-p3-desk@2x-min.jpg 2x"
+                media="(max-width:1199px)">
+              <source
+                srcset="./img/main-img/desktop/team-p3-desk@1x-min.jpg 1x, ./img/main-img/desktop/team-p3-desk@2x-min.jpg 2x"
+                media="(min-width:1200px)">
+              <img src="./img/main-img/desktop/team-p3-desk@1x-min.jpg" alt="фото гора Дем'яненко" width="500">
+            </picture>
             <h3 class="team__subtitle">Микола Тарасов</h3>
             <p class="team__text">Marketing</p>
             <ul class="team__socials">
@@ -258,7 +302,18 @@
             </ul>
           </li>
           <li class="team__item" data-aos="flip-left" data-aos-duration="2500">
-            <img class="team__image" src="./img/imgIndex/img7.webp" alt="фото Михайла Єрмакова" width="500">
+            <picture class="team__image">
+              <source
+                srcset="./img/main-img/mobile/team-p4-mob@1x-min.jpg 1x, ./img/main-img/mobile/team-p4-mob@2x-min.jpg 2x"
+                media="(max-width:767px)">
+              <source
+                srcset="./img/main-img/desktop/team-p4-desk@1х-min.jpg 1x, ./img/main-img/desktop/team-p4-desk@2x-min.jpg 2x"
+                media="(max-width:1199px)">
+              <source
+                srcset="./img/main-img/desktop/team-p4-desk@1x-min.jpg 1x, ./img/main-img/desktop/team-p4-desk@2x-min.jpg 2x"
+                media="(min-width:1200px)">
+              <img src="./img/main-img/desktop/team-p4-desk@1x-min.jpg" alt="фото гора Дем'яненко" width="500">
+            </picture>
             <h3 class="team__subtitle">Михайло Єрмаков</h3>
             <p class="team__text">UI Designer</p>
             <ul class="team__socials">
@@ -462,47 +517,47 @@
       </div>
     </div> -->
 
-    <div class="menu-backdrop is-hidden js-menu-container">
-      <div class="menu">
-        <div class="menu__box1">
-          <ul class="menu__pages">
-            <li class="menu__page">        
-              <a href="./index.html" class="menu__page-link">Студія</a>
-            </li>
-            <li class="menu__page">          
-              <a href="./portfolio.html" class="menu__page-link">Портфоліо</a>
-            </li>
-            <li class="menu__page">          
-              <a href="#" class="menu__page-link">Контакти</a>
-            </li>
-          </ul>
-        </div>
-        <div class="menu__box2">
-          <a class="menu__number" href="tel:+380961111111">+38 096 111 11 11</a>
-          <a class="menu__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        </div>
-        <div class="menu__box3">
-          <ul class="menu__socials">
-            <li class="menu__social">Instagram</li>
-            <li class="menu__social">Twitter</li>
-            <li class="menu__social">Facebook</li>
-            <li class="menu__social">LinkedIn</li>
-          </ul>
-        </div>
-        <button class="menu__close-btn js-close-menu" type="button">
-          <svg class="menu__close-svg">
-            <use href="./img/svg/symbol-defs.svg#icon-modal-close"></use>
-          </svg>
-        </button>
+  <div class="menu-backdrop is-hidden js-menu-container">
+    <div class="menu">
+      <div class="menu__box1">
+        <ul class="menu__pages">
+          <li class="menu__page">
+            <a href="./index.html" class="menu__page-link">Студія</a>
+          </li>
+          <li class="menu__page">
+            <a href="./portfolio.html" class="menu__page-link">Портфоліо</a>
+          </li>
+          <li class="menu__page">
+            <a href="#" class="menu__page-link">Контакти</a>
+          </li>
+        </ul>
       </div>
+      <div class="menu__box2">
+        <a class="menu__number" href="tel:+380961111111">+38 096 111 11 11</a>
+        <a class="menu__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+      </div>
+      <div class="menu__box3">
+        <ul class="menu__socials">
+          <li class="menu__social">Instagram</li>
+          <li class="menu__social">Twitter</li>
+          <li class="menu__social">Facebook</li>
+          <li class="menu__social">LinkedIn</li>
+        </ul>
+      </div>
+      <button class="menu__close-btn js-close-menu" type="button">
+        <svg class="menu__close-svg">
+          <use href="./img/svg/symbol-defs.svg#icon-modal-close"></use>
+        </svg>
+      </button>
     </div>
+  </div>
 
   <script type="module" src="./js/modal.js"></script>
   <script type="module" src="./js/menu.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
+  </script> -->
 </body>
 
 </html>

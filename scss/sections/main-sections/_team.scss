@@ -7,7 +7,7 @@
     color: $dark-gray-color;
     text-align: center;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1200px) {
       @include text-styles(36px, normal, 700, 1.08px);
     }
   }
@@ -23,7 +23,7 @@
       flex-wrap: wrap;
     justify-content: center;    }
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1200px) {
       flex-direction: row;
       flex-wrap: nowrap;
     }
@@ -36,7 +36,7 @@
     padding-bottom: 30px;
     border-radius: 4px;
 
-    @media screen and (min-width: 768px) and (max-width:1440px) {
+    @media screen and (min-width: 768px) and (max-width:1200px) {
       width: 354px;
     }
   }
@@ -62,7 +62,7 @@
     color: $light-gray-color;
     text-align: center;
 
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 1200px) {
       @include text-styles(16px, 1.19, 400);
     }
   }
