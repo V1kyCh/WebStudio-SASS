@@ -1,23 +1,25 @@
 .hero {
   position: relative;
   background-color: $hero-overlay-bg;
-  background-image: url(../../../img/main-img/mobile/hero-bc-mob@1х-min.jpg);
+  background-image: url(../../../img/main-img/desktop/hero-bg-desk@1x-min.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   height: 400px;
 
-  @media screen and (min-width: 481px) and (max-width: 1200px) {
-    background-image: url(../../../img/main-img/tablet/hero-bg-tab@1x-min.jpg);
-  }
-
   @media screen and (min-width: 769px) {
-    background-image: url(../../../img/main-img/desktop/hero-bg-desk@1x-min.jpg);
     height: 400px;
   }
 
   @media screen and (min-width: 1200px) {
     height: 600px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../../../img/main-img/desktop/hero-bg-desk@2x-min.jpg);
   }
 
   &__overlay {
