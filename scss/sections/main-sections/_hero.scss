@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   background-color: $hero-overlay-bg;
-  background-image: url(../../../img/main-img/desktop/hero-bg-desk@1x-min.jpg);
+  background-image: url(../../img/main-img/desktop/hero-bg-desk@1x-min.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -19,7 +19,7 @@
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../../../img/main-img/desktop/hero-bg-desk@2x-min.jpg);
+      background-image: url(../../img/main-img/desktop/hero-bg-desk@2x-min.jpg);
   }
 
   &__overlay {
