@@ -2,7 +2,7 @@
   @include sections-retreat(60px, 60px);
 
   @media screen and (min-width: 1200px) {
-    @include sections-retreat(94px); 
+    @include sections-retreat(94px);
   }
 
   &__list {
@@ -48,19 +48,43 @@
   }
 
   &__ssi1::before {
-    background-image: url(../../img/imgIndex/ssi/antenna1.webp);
+    background-image: url(../../../img/main-img/desktop/antenna1@1x-min.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../../../img/main-img/desktop/antenna1@2x-min.png);
+    }
   }
 
   &__ssi2::before {
-    background-image: url(../../img/imgIndex/ssi/clock2.webp);
+    background-image: url(../../../img/main-img/desktop/clock2@1x-min.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../../../img/main-img/desktop/clock2@2x-min.png);
+    }
   }
 
   &__ssi3::before {
-    background-image: url(../../img/imgIndex/ssi/diagram3.webp);
+    background-image: url(../../../img/main-img/desktop/diagram3@1x-min.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../../../img/main-img/desktop/diagram3@2x-min.png);
+    }
   }
 
   &__ssi4::before {
-    background-image: url(../../img/imgIndex/ssi/astronaut4.webp);
+    background-image: url(../../../img/main-img/desktop/astronaut4@1x-min.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../../../img/main-img/desktop/astronaut4@2x-min.png);
+    }
   }
 
   &__title {

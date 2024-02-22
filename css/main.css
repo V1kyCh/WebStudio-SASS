@@ -39,6 +39,7 @@ img {
   display: block;
   width: 100%;
   max-width: 100%;
+  background-color: transparent;
 }
 
 button {
@@ -771,16 +772,36 @@ input .modal__comment-input::placeholder {
   }
 }
 .advantages__ssi1::before {
-  background-image: url(../../img/imgIndex/ssi/antenna1.webp);
+  background-image: url(../../../img/main-img/desktop/antenna1@1x-min.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__ssi1::before {
+    background-image: url(../../../img/main-img/desktop/antenna1@2x-min.png);
+  }
 }
 .advantages__ssi2::before {
-  background-image: url(../../img/imgIndex/ssi/clock2.webp);
+  background-image: url(../../../img/main-img/desktop/clock2@1x-min.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__ssi2::before {
+    background-image: url(../../../img/main-img/desktop/clock2@2x-min.png);
+  }
 }
 .advantages__ssi3::before {
-  background-image: url(../../img/imgIndex/ssi/diagram3.webp);
+  background-image: url(../../../img/main-img/desktop/diagram3@1x-min.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__ssi3::before {
+    background-image: url(../../../img/main-img/desktop/diagram3@2x-min.png);
+  }
 }
 .advantages__ssi4::before {
-  background-image: url(../../img/imgIndex/ssi/astronaut4.webp);
+  background-image: url(../../../img/main-img/desktop/astronaut4@1x-min.png);
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .advantages__ssi4::before {
+    background-image: url(../../../img/main-img/desktop/astronaut4@2x-min.png);
+  }
 }
 .advantages__title {
   font-size: 14px;
@@ -826,7 +847,7 @@ input .modal__comment-input::placeholder {
   position: relative;
 }
 .work__img {
-  width: 360px;
+  width: 100%;
 }
 .work__box {
   position: absolute;

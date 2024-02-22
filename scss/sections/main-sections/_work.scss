@@ -1,7 +1,7 @@
 .work {
   @include sections-retreat(54px, 94px);
   display: none;
-  
+
   @media screen and (min-width: 1200px) {
     display: block;
   }
@@ -11,21 +11,21 @@
     color: $dark-gray-color;
     text-align: center;
   }
-  
+
   &__list {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
   }
-  
+
   &__item {
     position: relative;
   }
 
   &__img {
-    width: 360px;
+    width: 100%;
   }
-  
+
   &__box {
     position: absolute;
     left: 0;
@@ -37,12 +37,12 @@
     @extend %list-position;
     justify-content: center;
   }
-  
+
   &__text {
     @include text-styles(14px, normal, 700, 0.42px);
     color: $white-color;
     text-align: center;
     font-style: normal;
     text-transform: uppercase;
-  } 
+  }
 }
