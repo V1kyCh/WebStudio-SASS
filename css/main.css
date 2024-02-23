@@ -847,7 +847,7 @@ input .modal__comment-input::placeholder {
   position: relative;
 }
 .work__img {
-  width: 100%;
+  width: 370px;
 }
 .work__box {
   position: absolute;
