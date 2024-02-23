@@ -916,7 +916,7 @@ input .modal__comment-input::placeholder {
   padding-bottom: 30px;
   border-radius: 4px;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .team__item {
     width: 354px;
   }
