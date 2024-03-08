@@ -1,9 +1,9 @@
-@import './base/common';
-@import './base/reset';
-
 @import './utils/vars';
 @import './utils/placeholder';
 @import './utils/mixins';
+
+@import './base/common';
+@import './base/reset';
 
 @import './components/main-header';
 @import './sections/main-sections/mobile-menu';

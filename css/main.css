@@ -1,3 +1,20 @@
+.footer__logo, .work__box, .modal__close, .modal__box, .header__contacts-link, .header__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.advantages__item::before, .header__navigation-first-page::after {
+  content: "";
+  display: block;
+  width: 100%;
+}
+
+.footer__form-div, .footer__box2, .footer__list, .footer__box1, .footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body {
   font-family: "Roboto";
 }
@@ -44,23 +61,6 @@ img {
 
 button {
   border: none;
-}
-
-.footer__logo, .work__box, .modal__close, .modal__box, .header__contacts-link, .header__navigation {
-  display: flex;
-  align-items: center;
-}
-
-.advantages__item::before, .header__navigation-first-page::after {
-  content: "";
-  display: block;
-  width: 100%;
-}
-
-.footer__form-div, .footer__box2, .footer__list, .footer__box1, .footer__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .header {
